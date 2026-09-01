@@ -17,6 +17,7 @@ import {
 } from "@/types";
 import { hashPassword } from "./auth";
 import * as ordersDb from "./orders-db";
+import * as productsDb from "./products-db";
 
 export const DEFAULT_SETTINGS: StoreSettings = {
   appearance: {
@@ -210,8 +211,10 @@ export async function getProducts(options?: {
   size?: string;
   color?: string;
 }): Promise<Product[]> {
-  const db = await getDb();
-  let products = [...db.products];
+  // Products are persisted in Postgres (not the JSON file) because Vercel's
+  // serverless filesystem is read-only in production. Filtering/sorting stays
+  // in memory — the catalog is small.
+  let products = await productsDb.getAllProducts();
 
   if (options?.category && options.category !== "All") {
     products = products.filter(
@@ -301,16 +304,14 @@ export async function getProducts(options?: {
 }
 
 export async function getProductById(id: string): Promise<Product | null> {
-  const db = await getDb();
-  return db.products.find((p) => p.id === id || p.slug === id) || null;
+  return productsDb.getProductById(id);
 }
 
 export async function trackProductActivity(
   productId: string,
   action: "view" | "cart_add" | "wishlist"
 ): Promise<boolean> {
-  const db = await getDb();
-  const product = db.products.find((p) => p.id === productId);
+  const product = await productsDb.getProductById(productId);
   if (!product) return false;
 
   if (action === "view") {
@@ -321,12 +322,11 @@ export async function trackProductActivity(
     product.wishlistCount = (product.wishlistCount || 0) + 1;
   }
 
-  await saveDb(db);
+  await productsDb.updateProductInDb(product.id, product);
   return true;
 }
 
 export async function createProduct(productData: Omit<Product, "id" | "createdAt">): Promise<Product> {
-  const db = await getDb();
   const newProduct: Product = {
     ...productData,
     id: `gs-prod-${Date.now()}`,
@@ -336,31 +336,27 @@ export async function createProduct(productData: Omit<Product, "id" | "createdAt
     salesCount: 0,
     createdAt: new Date().toISOString(),
   };
-  db.products.unshift(newProduct);
-  await saveDb(db);
+  await productsDb.insertProduct(newProduct);
   await logActivity("PRODUCT_CREATED", `Added product: ${newProduct.name}`, "Admin");
   return newProduct;
 }
 
 export async function updateProduct(id: string, updates: Partial<Product>): Promise<Product | null> {
-  const db = await getDb();
-  const index = db.products.findIndex((p) => p.id === id);
-  if (index === -1) return null;
+  const existing = await productsDb.getProductById(id);
+  if (!existing) return null;
 
-  db.products[index] = { ...db.products[index], ...updates };
-  await saveDb(db);
-  await logActivity("PRODUCT_UPDATED", `Updated product: ${db.products[index].name}`, "Admin");
-  return db.products[index];
+  const updated: Product = { ...existing, ...updates };
+  await productsDb.updateProductInDb(existing.id, updated);
+  await logActivity("PRODUCT_UPDATED", `Updated product: ${updated.name}`, "Admin");
+  return updated;
 }
 
 export async function deleteProduct(id: string): Promise<boolean> {
-  const db = await getDb();
-  const index = db.products.findIndex((p) => p.id === id);
-  if (index === -1) return false;
+  const existing = await productsDb.getProductById(id);
+  if (!existing) return false;
 
-  const deleted = db.products.splice(index, 1)[0];
-  await saveDb(db);
-  await logActivity("PRODUCT_DELETED", `Deleted product: ${deleted.name}`, "Admin");
+  await productsDb.deleteProductFromDb(existing.id);
+  await logActivity("PRODUCT_DELETED", `Deleted product: ${existing.name}`, "Admin");
   return true;
 }
 
@@ -423,15 +419,17 @@ export async function createOrder(orderData: Omit<Order, "id" | "createdAt">): P
     createdAt: new Date().toISOString(),
   };
 
-  // Decrement stock and increment salesCount for each purchased item
+  // Decrement stock and increment salesCount for each purchased item.
+  // Products live in Postgres, so updates must go through productsDb.
   for (const item of newOrder.items) {
-    const product = db.products.find((p) => p.id === item.productId);
+    const product = await productsDb.getProductById(item.productId);
     if (product) {
       product.stock = Math.max(0, product.stock - item.quantity);
       product.salesCount = (product.salesCount || 0) + item.quantity;
       if (product.stockPerSize && product.stockPerSize[item.size] !== undefined) {
         product.stockPerSize[item.size] = Math.max(0, product.stockPerSize[item.size] - item.quantity);
       }
+      await productsDb.updateProductInDb(product.id, product);
     }
   }
 
@@ -719,10 +717,11 @@ export async function addReview(reviewData: Omit<Review, "id" | "date">): Promis
   const avgRating =
     productReviews.reduce((sum, r) => sum + r.rating, 0) / productReviews.length;
 
-  const prod = db.products.find((p) => p.id === reviewData.productId);
+  const prod = await productsDb.getProductById(reviewData.productId);
   if (prod) {
     prod.rating = Number(avgRating.toFixed(1));
     prod.reviewCount = productReviews.length;
+    await productsDb.updateProductInDb(prod.id, prod);
   }
 
   await saveDb(db);
@@ -908,14 +907,15 @@ export async function getAnalytics(period: "7d" | "30d" | "3m" | "6m" | "1y" = "
     Cancelled: allOrders.filter((o) => o.status === "Cancelled").length,
   };
 
-  const lowStockProducts = db.products.filter((p) => p.stock <= lowThreshold);
+  const allProducts = await productsDb.getAllProducts();
+  const lowStockProducts = allProducts.filter((p) => p.stock <= lowThreshold);
 
   const categoryStats: Record<string, number> = {};
-  db.products.forEach((p) => {
+  allProducts.forEach((p) => {
     categoryStats[p.category] = (categoryStats[p.category] || 0) + 1;
   });
 
-  const topSellingProducts = [...db.products]
+  const topSellingProducts = [...allProducts]
     .sort((a, b) => (b.salesCount || 0) - (a.salesCount || 0))
     .slice(0, 5);
 

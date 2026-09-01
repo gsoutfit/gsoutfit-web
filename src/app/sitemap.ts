@@ -1,6 +1,10 @@
 import { MetadataRoute } from "next";
 import { getProducts, getCategories } from "@/lib/db";
 
+// Products come from Postgres now — render the sitemap per request so newly
+// added products show up without waiting for a redeploy.
+export const dynamic = "force-dynamic";
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://gentlemansavage.com";
 
