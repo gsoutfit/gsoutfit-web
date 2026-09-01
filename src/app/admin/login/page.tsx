@@ -93,7 +93,6 @@ export default function AdminLoginPage() {
               <input
                 type="text"
                 required
-                placeholder="Resol or resol@gentlemensavage.com"
                 value={identifier}
                 onChange={(e) => setIdentifier(e.target.value)}
                 className="w-full p-3 bg-[#18181f] border border-zinc-800 rounded-xl text-zinc-200 focus:outline-none focus:border-[#D4AF37]"

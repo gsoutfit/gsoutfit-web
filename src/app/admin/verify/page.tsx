@@ -196,7 +196,6 @@ function AdminVerifyContent() {
                   required
                   value={identifier}
                   onChange={(e) => setIdentifier(e.target.value)}
-                  placeholder="Resol or resol@gentlemensavage.com"
                   className="w-full pl-10 pr-3 py-2.5 rounded-xl bg-[#0a0a0d] border border-zinc-800 text-zinc-100 placeholder-zinc-600 focus:outline-none focus:border-[#D4AF37] text-xs font-medium"
                 />
               </div>
