@@ -1,0 +1,1988 @@
+{
+  "products": [
+    {
+      "id": "gs-prod-1",
+      "name": "Obsidian Raw Leather Biker Jacket",
+      "nameBn": "অবসিডিয়ান র লেদার বাইকার জ্যাকেট",
+      "slug": "obsidian-raw-leather-biker-jacket",
+      "tagline": "Hand-buffed Italian calfskin with gunmetal hardware.",
+      "taglineBn": "হ্যান্ড-বাফড ইতালিয়ান কাফস্কিন ও গানমেটাল হার্ডওয়্যার।",
+      "description": "Crafted from full-grain vegetable-tanned Italian calfskin, the Obsidian Biker Jacket embodies the raw attitude of modern luxury. Features asymmetric heavy-duty silver-tone zip closures, structured shoulder panels, and quilted silk-satin lining for effortless layering and all-season endurance.",
+      "descriptionBn": "প্রিমিয়াম ইতালিয়ান ফুল-গ্রেইন কাফস্কিন লেদারে তৈরি এই অবসিডিয়ান বাইকার জ্যাকেট আভিজাত্য ও আধুনিক স্টাইলের অনন্য নিদর্শন। এর সিল্ক-সাটিন লাইনিং ও সিলভার-টোন জিপার আপনাকে দেবে প্রিমিয়াম অনুভূতি।",
+      "fabricCare": "100% Full-Grain Calfskin Leather. Lining: 100% Cupro Silk. Professional leather dry clean only.",
+      "fabricCareBn": "১০০% ফুল-গ্রেইন কাফস্কিন লেদার। লাইনিং: ১০০% কাপরো সিল্ক। শুধুমাত্র লেদার ড্রাই ক্লিন উপযোগী।",
+      "fitDetails": "Tailored slim fit with articulated arms. Model is 6'2\" (188cm) wearing size Large.",
+      "fitDetailsBn": "টেইলরড স্লিম ফিট। মডেলের উচ্চতা ৬ ফুট ২ ইঞ্চি (সাইজ Large পরিহিত)।",
+      "price": 450,
+      "discountPrice": 390,
+      "category": "Jackets",
+      "season": "Winter Collection",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Obsidian Black",
+          "hex": "#0F0F10"
+        },
+        {
+          "name": "Distressed Charcoal",
+          "hex": "#2E2E32"
+        },
+        {
+          "name": "Cognac Brown",
+          "hex": "#5A3825"
+        }
+      ],
+      "stock": 12,
+      "stockPerSize": {
+        "S": 2,
+        "M": 4,
+        "L": 3,
+        "XL": 2,
+        "XXL": 1
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 38,
+      "tags": [
+        "Leather",
+        "Outerwear",
+        "Bestseller",
+        "Luxury",
+        "Winter"
+      ],
+      "isFeatured": true,
+      "isTrending": true,
+      "isNewArrival": false,
+      "isBestSeller": true,
+      "isFlashSale": true,
+      "flashSaleDiscount": 15,
+      "createdAt": "2026-01-10T12:00:00Z",
+      "salesCount": 2
+    },
+    {
+      "id": "gs-prod-2",
+      "name": "Tailored Silk-Blend Tuxedo Blazer",
+      "nameBn": "টেইলরড সিল্ক-ব্লেন্ড টাক্সিডো ব্লেজার",
+      "slug": "tailored-silk-blend-tuxedo-blazer",
+      "tagline": "Peak satin lapels for the uncompromising gentleman.",
+      "taglineBn": "অতুলনীয় আভিজাত্যের জন্য পিক সাটিন ল্যাপেলযুক্ত ব্লেজার।",
+      "description": "A masterclass in modern sartorial precision. Cut from an exquisite 280gsm wool-mulberry silk blend, this tuxedo blazer combines sharp architectural shoulders with a softly draped waist. Finished with hand-stitched grosgrain lapels and genuine horn buttons.",
+      "descriptionBn": "আধুনিক টেইলারিং দক্ষতার এক অপূর্ব নিদর্শন। প্রিমিয়াম ভার্জিন উল ও সিল্কের সংমিশ্রণে তৈরি এই টাক্সিডো ব্লেজার যেকোনো বিশেষ অনুষ্ঠানে আপনাকে দেবে বিশেষ মর্যাদা।",
+      "fabricCare": "85% Virgin Wool, 15% Mulberry Silk. Dry clean only. Warm iron with pressing cloth.",
+      "fitDetails": "Modern architectural cut. Fits true to size with sculpted waist. Model is 6'1\" wearing size 40R (M).",
+      "price": 520,
+      "discountPrice": 460,
+      "category": "Formal Wear",
+      "season": "All-Season",
+      "sizes": [
+        "38R",
+        "40R",
+        "42R",
+        "44R",
+        "46R"
+      ],
+      "colors": [
+        {
+          "name": "Midnight Tuxedo Black",
+          "hex": "#090A0F"
+        },
+        {
+          "name": "Champagne Ivory",
+          "hex": "#EDE8DE"
+        },
+        {
+          "name": "Imperial Emerald",
+          "hex": "#0C2E24"
+        }
+      ],
+      "stock": 17,
+      "stockPerSize": {
+        "38R": 3,
+        "40R": 6,
+        "42R": 4,
+        "44R": 3,
+        "46R": 1
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 5,
+      "reviewCount": 42,
+      "tags": [
+        "Formal",
+        "Blazer",
+        "Tuxedo",
+        "Gentleman",
+        "Wedding"
+      ],
+      "isFeatured": true,
+      "isTrending": true,
+      "isNewArrival": true,
+      "isBestSeller": false,
+      "isFlashSale": false,
+      "createdAt": "2026-02-01T10:00:00Z",
+      "salesCount": 1
+    },
+    {
+      "id": "gs-prod-3",
+      "name": "Monochrome Heavyweight Street Hoodie",
+      "nameBn": "মনোক্রোম হেভিওয়েট স্ট্রিট হুডি",
+      "slug": "monochrome-heavyweight-street-hoodie",
+      "tagline": "520gsm custom looped French terry with metal aglets.",
+      "taglineBn": "৫২০ জিএসএম কাস্টম লুপড ফ্রেঞ্চ টেরি ও মেটাল অ্যাগলেটস।",
+      "description": "Constructed from custom-developed 520 GSM organic French terry cotton. Boasts a seamless double-layered hood, drop-shoulder drape, kangaroo pocket with hidden card compartment, and tonal high-density matte 'Gentleman Savage' emblem at the chest.",
+      "descriptionBn": "৫২০ জিএসএম অর্গানিক ফ্রেঞ্চ টেরি কটনে তৈরি এই প্রিমিয়াম হুডি শীতের স্টাইলিং ও সর্বোচ্চ আরামের জন্য নিখুঁত।",
+      "fabricCare": "100% Organic Heavyweight Cotton. Cold machine wash inside out. Lay flat to dry.",
+      "fitDetails": "Oversized boxy drape. Size down for a standard tailored fit. Model is 6'0\" wearing size M.",
+      "price": 145,
+      "discountPrice": 115,
+      "category": "Hoodies",
+      "season": "Winter Collection",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Vantablack",
+          "hex": "#0D0D0E"
+        },
+        {
+          "name": "Bleached Bone",
+          "hex": "#EAE6DF"
+        },
+        {
+          "name": "Washed Slate",
+          "hex": "#4A4E5A"
+        }
+      ],
+      "stock": 35,
+      "stockPerSize": {
+        "XS": 4,
+        "S": 8,
+        "M": 12,
+        "L": 7,
+        "XL": 3,
+        "XXL": 1
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 94,
+      "tags": [
+        "Hoodie",
+        "Streetwear",
+        "Oversized",
+        "Heavyweight"
+      ],
+      "isFeatured": false,
+      "isTrending": true,
+      "isNewArrival": false,
+      "isBestSeller": true,
+      "isFlashSale": true,
+      "flashSaleDiscount": 20,
+      "createdAt": "2026-01-05T08:00:00Z"
+    },
+    {
+      "id": "gs-prod-4",
+      "name": "Italian Virgin Wool Pleated Trousers",
+      "slug": "italian-virgin-wool-pleated-trousers",
+      "tagline": "Deep forward double pleats with tailored side adjusters.",
+      "description": "Refined bespoke craftsmanship meets daily versatility. Cut with high-rise waistline, extended waistband tab, double forward pleats, and clean straight drape. Unfinished hem allows custom tailoring to your exact break.",
+      "fabricCare": "100% Super 130s Italian Wool. Dry clean only.",
+      "fitDetails": "High-rise relaxed taper. Model is 6'2\" wearing size 32.",
+      "price": 220,
+      "discountPrice": 185,
+      "category": "Pants",
+      "season": "Winter Collection",
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
+      "colors": [
+        {
+          "name": "Charcoal Flannel",
+          "hex": "#33353A"
+        },
+        {
+          "name": "Camel Melange",
+          "hex": "#A48666"
+        },
+        {
+          "name": "Midnight Navy",
+          "hex": "#131828"
+        }
+      ],
+      "stock": 22,
+      "stockPerSize": {
+        "30": 4,
+        "32": 8,
+        "34": 6,
+        "36": 3,
+        "38": 1
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 27,
+      "tags": [
+        "Trousers",
+        "Formal",
+        "Wool",
+        "Pleated",
+        "Gentleman"
+      ],
+      "isFeatured": true,
+      "isTrending": true,
+      "isNewArrival": true,
+      "isBestSeller": false,
+      "isFlashSale": false,
+      "createdAt": "2026-02-10T14:30:00Z"
+    },
+    {
+      "id": "gs-prod-5",
+      "name": "Vintage Washed Acid Drop Tee",
+      "slug": "vintage-washed-acid-drop-tee",
+      "tagline": "280gsm heavyweight jersey with distressed mineral wash.",
+      "description": "Individually hand-treated with an artisanal acid wash technique, ensuring no two tees are identical. Thick 1.25-inch ribbed collar, reinforced twin-needle stitching, and dropped shoulders create the quintessential luxury streetwear silhouette.",
+      "fabricCare": "100% Combed Compact Cotton. Machine wash cold with like colors. Tumble dry low.",
+      "fitDetails": "Relaxed boxy streetwear fit. True to size. Model is 6'1\" wearing size L.",
+      "price": 68,
+      "discountPrice": 52,
+      "category": "T-Shirts",
+      "season": "Summer Collection",
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Mineral Washed Black",
+          "hex": "#232326"
+        },
+        {
+          "name": "Desert Clay",
+          "hex": "#9B6454"
+        },
+        {
+          "name": "Sage Moss",
+          "hex": "#5A675B"
+        }
+      ],
+      "stock": 47,
+      "stockPerSize": {
+        "XS": 6,
+        "S": 10,
+        "M": 15,
+        "L": 10,
+        "XL": 4,
+        "XXL": 2
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 65,
+      "tags": [
+        "T-Shirt",
+        "Streetwear",
+        "Summer",
+        "Vintage",
+        "Washed"
+      ],
+      "isFeatured": false,
+      "isTrending": true,
+      "isNewArrival": true,
+      "isBestSeller": true,
+      "isFlashSale": true,
+      "flashSaleDiscount": 23,
+      "createdAt": "2026-02-14T09:00:00Z",
+      "views": 5,
+      "cartAdds": 2,
+      "salesCount": 1
+    },
+    {
+      "id": "gs-prod-6",
+      "name": "Distressed Raw Selvedge Denim Jeans",
+      "slug": "distressed-raw-selvedge-denim-jeans",
+      "tagline": "14.5oz Japanese shuttle-loom denim with custom fading.",
+      "description": "Woven in Kurashiki, Japan on vintage shuttle looms. These 14.5oz red-line selvedge jeans undergo a 4-stage hand-distressing process for authentic wear marks. Features custom gunmetal donut buttons and heavy leather patch.",
+      "fabricCare": "100% Japanese Cotton Denim. Wash cold inside out sparingly to preserve raw patina.",
+      "fitDetails": "Slim straight leg with a slight taper below the knee. Model is 6'2\" wearing size 32x32.",
+      "price": 195,
+      "discountPrice": 165,
+      "category": "Jeans",
+      "season": "All-Season",
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
+      "colors": [
+        {
+          "name": "Raw Deep Indigo",
+          "hex": "#1B243B"
+        },
+        {
+          "name": "Faded Obsidian",
+          "hex": "#2B2B30"
+        },
+        {
+          "name": "Dirty Vintage Wash",
+          "hex": "#3A4556"
+        }
+      ],
+      "stock": 28,
+      "stockPerSize": {
+        "30": 5,
+        "32": 10,
+        "34": 8,
+        "36": 4,
+        "38": 1
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 51,
+      "tags": [
+        "Jeans",
+        "Denim",
+        "Selvedge",
+        "Streetwear",
+        "Japanese"
+      ],
+      "isFeatured": true,
+      "isTrending": false,
+      "isNewArrival": false,
+      "isBestSeller": true,
+      "isFlashSale": false,
+      "createdAt": "2026-01-18T16:00:00Z"
+    },
+    {
+      "id": "gs-prod-7",
+      "name": "Pure Cashmere Mock-Neck Knit Sweater",
+      "slug": "pure-cashmere-mock-neck-knit-sweater",
+      "tagline": "Grade-A Mongolian cashmere with ribbed architectural trims.",
+      "description": "Unrivaled thermal softness and featherlight weight. Sourced sustainably from Mongolian mountain goats, this 2-ply 12-gauge knit offers supreme insulation with a modern structured mock collar that slides gracefully under outerwear or blazers.",
+      "fabricCare": "100% Grade-A Cashmere. Hand wash with wool detergent or gentle dry clean. Do not wring.",
+      "fitDetails": "Tailored contemporary fit. Model is 6'1\" wearing size L.",
+      "price": 280,
+      "discountPrice": 225,
+      "category": "Casual Wear",
+      "season": "Winter Collection",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Champagne Oatmeal",
+          "hex": "#DDD5C7"
+        },
+        {
+          "name": "Espresso Brown",
+          "hex": "#38251C"
+        },
+        {
+          "name": "Stealth Charcoal",
+          "hex": "#27272A"
+        }
+      ],
+      "stock": 16,
+      "stockPerSize": {
+        "S": 3,
+        "M": 6,
+        "L": 4,
+        "XL": 2,
+        "XXL": 1
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1614975058789-41316d0e2e9c?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 33,
+      "tags": [
+        "Cashmere",
+        "Knitwear",
+        "Winter",
+        "Luxury",
+        "Gentleman"
+      ],
+      "isFeatured": true,
+      "isTrending": true,
+      "isNewArrival": true,
+      "isBestSeller": false,
+      "isFlashSale": true,
+      "flashSaleDiscount": 20,
+      "createdAt": "2026-02-12T11:00:00Z"
+    },
+    {
+      "id": "gs-prod-8",
+      "name": "Luxury Pima Cotton Crisp Dress Shirt",
+      "slug": "luxury-pima-cotton-crisp-dress-shirt",
+      "tagline": "120s two-ply Peruvian Pima with mother-of-pearl buttons.",
+      "description": "Engineered for the discerning professional. High-density weave offers wrinkle resistance while retaining silky breathability. Features a spread collar designed to frame tie knots perfectly, removable brass collar stays, and curved hem.",
+      "fabricCare": "100% Peruvian Pima Cotton. Warm machine wash. Warm iron while slightly damp.",
+      "fitDetails": "Slim tailored fit with back darts. Model is 6'2\" wearing size 16 (L).",
+      "price": 135,
+      "discountPrice": 105,
+      "category": "Shirts",
+      "season": "Summer Collection",
+      "sizes": [
+        "15 (S)",
+        "15.5 (M)",
+        "16 (L)",
+        "16.5 (XL)",
+        "17 (XXL)"
+      ],
+      "colors": [
+        {
+          "name": "Crisp Optical White",
+          "hex": "#F8F8F8"
+        },
+        {
+          "name": "Glacier Sky Blue",
+          "hex": "#C5D8E8"
+        },
+        {
+          "name": "Micro Pinstripe Navy",
+          "hex": "#1E2A38"
+        }
+      ],
+      "stock": 42,
+      "stockPerSize": {
+        "15 (S)": 8,
+        "15.5 (M)": 14,
+        "16 (L)": 12,
+        "16.5 (XL)": 6,
+        "17 (XXL)": 2
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1620012253295-c15c429f66bf?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 46,
+      "tags": [
+        "Shirt",
+        "Formal",
+        "Gentleman",
+        "Business",
+        "Pima"
+      ],
+      "isFeatured": false,
+      "isTrending": true,
+      "isNewArrival": false,
+      "isBestSeller": true,
+      "isFlashSale": false,
+      "createdAt": "2026-01-22T10:00:00Z"
+    },
+    {
+      "id": "gs-prod-9",
+      "name": "French Terry Oversized Street Hoodie",
+      "slug": "french-terry-oversized-street-hoodie",
+      "tagline": "Minimalist silhouette with hidden side stash pockets.",
+      "description": "A luxury everyday essential. Custom-dyed with raw pigment dye wash, seamless side construction, dropped armholes, and minimalist matte branded plate at the hood apex.",
+      "fabricCare": "100% Ring-Spun Cotton (480 GSM). Machine wash cold. Air dry.",
+      "fitDetails": "Relaxed drape with cropped hemline. Model is 6'0\" wearing size M.",
+      "price": 130,
+      "discountPrice": 99,
+      "category": "Hoodies",
+      "season": "Winter Collection",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL"
+      ],
+      "colors": [
+        {
+          "name": "Onyx Black",
+          "hex": "#121214"
+        },
+        {
+          "name": "Warm Sand",
+          "hex": "#C9BDB1"
+        },
+        {
+          "name": "Forest Moss",
+          "hex": "#3E493F"
+        }
+      ],
+      "stock": 31,
+      "stockPerSize": {
+        "S": 6,
+        "M": 12,
+        "L": 9,
+        "XL": 4
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 58,
+      "tags": [
+        "Hoodie",
+        "Streetwear",
+        "Winter",
+        "Cozy"
+      ],
+      "isFeatured": false,
+      "isTrending": true,
+      "isNewArrival": true,
+      "isBestSeller": false,
+      "isFlashSale": true,
+      "flashSaleDiscount": 24,
+      "createdAt": "2026-02-18T12:00:00Z"
+    },
+    {
+      "id": "gs-prod-10",
+      "name": "Silk-Touch Resort Camp Collar Shirt",
+      "slug": "silk-touch-resort-camp-collar-shirt",
+      "tagline": "Airy tencel-silk drape with custom abstract botanical motifs.",
+      "description": "Channel effortless Mediterranean luxury. Silky smooth touch with relaxed Cuban collar, mother-of-pearl buttons, and straight boxy hem tailored for warm summer evenings and tropical getaways.",
+      "fabricCare": "70% Tencel Modal, 30% Mulberry Silk. Cold hand wash or dry clean.",
+      "fitDetails": "Relaxed breezy fit. True to size. Model is 6'1\" wearing size L.",
+      "price": 120,
+      "discountPrice": 95,
+      "category": "Shirts",
+      "season": "Summer Collection",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Monochrome Savage Flora",
+          "hex": "#1A1A1D"
+        },
+        {
+          "name": "Golden Terracotta",
+          "hex": "#C27D56"
+        },
+        {
+          "name": "Aegean Cyan",
+          "hex": "#3F7C85"
+        }
+      ],
+      "stock": 25,
+      "stockPerSize": {
+        "S": 4,
+        "M": 9,
+        "L": 7,
+        "XL": 4,
+        "XXL": 1
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 39,
+      "tags": [
+        "Shirt",
+        "Summer",
+        "Resort",
+        "Camp Collar",
+        "Silk"
+      ],
+      "isFeatured": true,
+      "isTrending": true,
+      "isNewArrival": true,
+      "isBestSeller": false,
+      "isFlashSale": false,
+      "createdAt": "2026-02-15T15:00:00Z"
+    },
+    {
+      "id": "gs-prod-11",
+      "name": "Double-Breasted Cashmere Blend Overcoat",
+      "slug": "double-breasted-cashmere-blend-overcoat",
+      "tagline": "Full-length bespoke silhouette in 680gsm heavy melton.",
+      "description": "The quintessential gentleman power piece. Woven from 75% virgin wool and 25% cashmere for heavyweight drape and structural warmth. Features wide peak lapels, horn buttons, deep internal welt pockets, and a dramatic back vent.",
+      "fabricCare": "75% Wool, 25% Cashmere. Specialty dry clean only. Store on wide wooden hanger.",
+      "fitDetails": "Structured tailored fit with room for layering over suits. Model is 6'2\" wearing size 42R.",
+      "price": 580,
+      "discountPrice": 490,
+      "category": "Jackets",
+      "season": "Winter Collection",
+      "sizes": [
+        "38R",
+        "40R",
+        "42R",
+        "44R",
+        "46R"
+      ],
+      "colors": [
+        {
+          "name": "Camel Heirloom",
+          "hex": "#B5946B"
+        },
+        {
+          "name": "Obsidian Night",
+          "hex": "#0F0F11"
+        },
+        {
+          "name": "Deep Bottle Green",
+          "hex": "#142B21"
+        }
+      ],
+      "stock": 11,
+      "stockPerSize": {
+        "38R": 2,
+        "40R": 4,
+        "42R": 3,
+        "44R": 1,
+        "46R": 1
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1548883354-7622d03aca27?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 5,
+      "reviewCount": 29,
+      "tags": [
+        "Overcoat",
+        "Outerwear",
+        "Winter",
+        "Gentleman",
+        "Cashmere"
+      ],
+      "isFeatured": true,
+      "isTrending": true,
+      "isNewArrival": false,
+      "isBestSeller": true,
+      "isFlashSale": false,
+      "createdAt": "2026-01-08T18:00:00Z"
+    },
+    {
+      "id": "gs-prod-12",
+      "name": "Tactical Minimalist Cargo Trousers",
+      "slug": "tactical-minimalist-cargo-trousers",
+      "tagline": "Water-repellent technical ripstop with magnetic closure pockets.",
+      "description": "Bridging utilitarian capability with sleek minimalist geometry. Cut from Japanese high-density matte ripstop fabric with subtle stretch. Concealed Fidlock-style magnetic bellows pockets and adjustable bungee ankle cuffs.",
+      "fabricCare": "92% Tech Polyamide, 8% Elastane. Machine wash cold. Do not tumble dry.",
+      "fitDetails": "Tapered technical silhouette with articulated knee darts. Model is 6'1\" wearing size 32.",
+      "price": 175,
+      "discountPrice": 140,
+      "category": "Pants",
+      "season": "All-Season",
+      "sizes": [
+        "30",
+        "32",
+        "34",
+        "36",
+        "38"
+      ],
+      "colors": [
+        {
+          "name": "Stealth Black",
+          "hex": "#111215"
+        },
+        {
+          "name": "Industrial Olive",
+          "hex": "#3B4235"
+        },
+        {
+          "name": "Gunmetal Grey",
+          "hex": "#4C4E52"
+        }
+      ],
+      "stock": 26,
+      "stockPerSize": {
+        "30": 4,
+        "32": 10,
+        "34": 7,
+        "36": 4,
+        "38": 1
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 41,
+      "tags": [
+        "Cargo",
+        "Pants",
+        "Streetwear",
+        "Techwear",
+        "Minimalist"
+      ],
+      "isFeatured": false,
+      "isTrending": true,
+      "isNewArrival": true,
+      "isBestSeller": false,
+      "isFlashSale": true,
+      "flashSaleDiscount": 20,
+      "createdAt": "2026-02-05T14:00:00Z"
+    },
+    {
+      "id": "gs-prod-13",
+      "name": "Handmade Full-Grain Leather Chelsea Boots",
+      "slug": "handmade-full-grain-leather-chelsea-boots",
+      "tagline": "Goodyear-welted Spanish calfskin with Dainite rubber sole.",
+      "description": "Constructed by master shoemakers in Almansa, Spain. Features a whole-cut vamp from hand-selected French box calf leather, flexible elastic gore panels, and Goodyear welt construction for lifetime resoling.",
+      "fabricCare": "French Box Calfskin. Clean with saphir cream polish and horsehair brush.",
+      "fitDetails": "Fits true to dress shoe size (half size down from athletic sneakers). Model wears EU 43 (US 10).",
+      "price": 310,
+      "discountPrice": 265,
+      "category": "Accessories",
+      "season": "All-Season",
+      "sizes": [
+        "EU 40 (US 7.5)",
+        "EU 41 (US 8.5)",
+        "EU 42 (US 9.5)",
+        "EU 43 (US 10.5)",
+        "EU 44 (US 11.5)",
+        "EU 45 (US 12.5)"
+      ],
+      "colors": [
+        {
+          "name": "Polished Nero Black",
+          "hex": "#0D0E10"
+        },
+        {
+          "name": "Burnt Espresso Brown",
+          "hex": "#301F18"
+        },
+        {
+          "name": "Snuff Suede",
+          "hex": "#78583E"
+        }
+      ],
+      "stock": 19,
+      "stockPerSize": {
+        "EU 40 (US 7.5)": 2,
+        "EU 41 (US 8.5)": 4,
+        "EU 42 (US 9.5)": 6,
+        "EU 43 (US 10.5)": 4,
+        "EU 44 (US 11.5)": 2,
+        "EU 45 (US 12.5)": 1
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 63,
+      "tags": [
+        "Boots",
+        "Chelsea",
+        "Shoes",
+        "Leather",
+        "Accessories",
+        "Gentleman"
+      ],
+      "isFeatured": true,
+      "isTrending": true,
+      "isNewArrival": false,
+      "isBestSeller": true,
+      "isFlashSale": false,
+      "createdAt": "2026-01-12T11:00:00Z"
+    },
+    {
+      "id": "gs-prod-14",
+      "name": "Luxury Weekender Duffel in Vegetable Leather",
+      "slug": "luxury-weekender-duffel-in-vegetable-leather",
+      "tagline": "Full-grain saddle leather with solid brass hardware.",
+      "description": "The ultimate companion for high-altitude travel and spontaneous weekend escapes. Features an reinforced bottom with protective brass feet, dedicated padded 16\" laptop chamber, and a detachable padded shoulder strap.",
+      "fabricCare": "Vegetable-Tanned Saddle Leather. Conditioning balm every 6 months.",
+      "fitDetails": "Airline carry-on approved dimensions: 52cm x 28cm x 26cm (42L volume).",
+      "price": 380,
+      "discountPrice": 320,
+      "category": "Accessories",
+      "season": "All-Season",
+      "sizes": [
+        "One Size (42L)"
+      ],
+      "colors": [
+        {
+          "name": "Vintage Havana Brown",
+          "hex": "#47281A"
+        },
+        {
+          "name": "Midnight Obsidian",
+          "hex": "#111113"
+        }
+      ],
+      "stock": 15,
+      "stockPerSize": {
+        "One Size (42L)": 15
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1547949003-9792a18a2601?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 5,
+      "reviewCount": 35,
+      "tags": [
+        "Bag",
+        "Duffel",
+        "Leather",
+        "Travel",
+        "Accessories"
+      ],
+      "isFeatured": true,
+      "isTrending": false,
+      "isNewArrival": true,
+      "isBestSeller": false,
+      "isFlashSale": true,
+      "flashSaleDiscount": 15,
+      "createdAt": "2026-02-08T09:30:00Z"
+    },
+    {
+      "id": "gs-prod-15",
+      "name": "Savage 18K Gold & Onyx Signet Ring",
+      "slug": "savage-18k-gold-onyx-signet-ring",
+      "tagline": "Solid 925 sterling silver plated in 5-micron 18K yellow gold.",
+      "description": "Featuring a natural hand-carved black onyx cabochon set in a geometrically chiseled signet frame. Micro-engraved with the signature Gentleman Savage crossed swords crest along the inner band.",
+      "fabricCare": "18K Gold Vermeil over 925 Silver, Natural Black Onyx. Polish with micro-suede cloth.",
+      "fitDetails": "Standard US ring sizing. Medium-weight feel on the finger (14.2g).",
+      "price": 95,
+      "discountPrice": 75,
+      "category": "Accessories",
+      "season": "All-Season",
+      "sizes": [
+        "US 7",
+        "US 8",
+        "US 9",
+        "US 10",
+        "US 11"
+      ],
+      "colors": [
+        {
+          "name": "18K Yellow Gold / Onyx",
+          "hex": "#D4AF37"
+        },
+        {
+          "name": "Sterling Silver / Onyx",
+          "hex": "#C0C0C0"
+        }
+      ],
+      "stock": 30,
+      "stockPerSize": {
+        "US 7": 4,
+        "US 8": 8,
+        "US 9": 10,
+        "US 10": 6,
+        "US 11": 2
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 78,
+      "tags": [
+        "Ring",
+        "Jewelry",
+        "Gold",
+        "Onyx",
+        "Accessories"
+      ],
+      "isFeatured": false,
+      "isTrending": true,
+      "isNewArrival": false,
+      "isBestSeller": true,
+      "isFlashSale": false,
+      "createdAt": "2026-01-15T10:00:00Z"
+    },
+    {
+      "id": "gs-prod-16",
+      "name": "Suede Minimalist Bomber Jacket",
+      "slug": "suede-minimalist-bomber-jacket",
+      "tagline": "Buttery soft goat suede with tone-on-tone wool ribbed cuffs.",
+      "description": "A refined take on the iconic flight jacket. Tailored from ultra-plush velvet goat suede with a double-ended antique silver zip, discreet seam pockets, and a satin interior with dual chest pockets.",
+      "fabricCare": "100% Premium Goat Suede. Specialist suede clean only.",
+      "fitDetails": "Streamlined tailored bomber fit. Model is 6'1\" wearing size L.",
+      "price": 360,
+      "discountPrice": 295,
+      "category": "Jackets",
+      "season": "Winter Collection",
+      "sizes": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        {
+          "name": "Sandstone Tan",
+          "hex": "#C2A884"
+        },
+        {
+          "name": "Dark Tobacco",
+          "hex": "#4C3224"
+        },
+        {
+          "name": "Midnight Ink",
+          "hex": "#14151B"
+        }
+      ],
+      "stock": 17,
+      "stockPerSize": {
+        "S": 3,
+        "M": 6,
+        "L": 5,
+        "XL": 2,
+        "XXL": 1
+      },
+      "images": [
+        "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=1000&q=80",
+        "https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=1000&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 32,
+      "tags": [
+        "Bomber",
+        "Suede",
+        "Jackets",
+        "Winter",
+        "Casual"
+      ],
+      "isFeatured": true,
+      "isTrending": true,
+      "isNewArrival": true,
+      "isBestSeller": false,
+      "isFlashSale": true,
+      "flashSaleDiscount": 18,
+      "createdAt": "2026-02-17T11:00:00Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-season-summer",
+      "name": "Summer Collection",
+      "slug": "summer-collection",
+      "type": "Season",
+      "description": "Airy luxury linens, silk resort shirts, breathable pima cotton, and lightweight tailoring built for sun-soaked days.",
+      "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80",
+      "itemCount": 18,
+      "isActive": true
+    },
+    {
+      "id": "cat-season-winter",
+      "name": "Winter Collection",
+      "slug": "winter-collection",
+      "type": "Season",
+      "description": "Heavyweight cashmere, virgin wool overcoats, calfskin biker jackets, and structured thermal streetwear.",
+      "image": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=1000&q=80",
+      "itemCount": 24,
+      "isActive": true
+    },
+    {
+      "id": "cat-jackets",
+      "name": "Jackets",
+      "slug": "jackets",
+      "type": "Clothing",
+      "description": "Full-grain biker leathers, suede bombers, cashmere overcoats, and modern trench outerwear.",
+      "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80",
+      "itemCount": 12,
+      "isActive": true
+    },
+    {
+      "id": "cat-hoodies",
+      "name": "Hoodies",
+      "slug": "hoodies",
+      "type": "Clothing",
+      "description": "520gsm heavy French terry, oversized drop-shoulder fits, and minimalist luxury streetwear pullovers.",
+      "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1000&q=80",
+      "itemCount": 10,
+      "isActive": true
+    },
+    {
+      "id": "cat-shirts",
+      "name": "Shirts",
+      "slug": "shirts",
+      "type": "Clothing",
+      "description": "Crisp 120s Peruvian Pima formal shirts, silk resort camp collars, and relaxed linen button-downs.",
+      "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=1000&q=80",
+      "itemCount": 15,
+      "isActive": true
+    },
+    {
+      "id": "cat-tshirts",
+      "name": "T-Shirts",
+      "slug": "t-shirts",
+      "type": "Clothing",
+      "description": "280gsm heavyweight acid wash boxy tees, clean pima crewnecks, and iconic branded graphics.",
+      "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80",
+      "itemCount": 14,
+      "isActive": true
+    },
+    {
+      "id": "cat-pants",
+      "name": "Pants",
+      "slug": "pants",
+      "type": "Clothing",
+      "description": "Italian pleated wool trousers, technical ripstop cargos, and relaxed linen drawstring pants.",
+      "image": "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=1000&q=80",
+      "itemCount": 11,
+      "isActive": true
+    },
+    {
+      "id": "cat-jeans",
+      "name": "Jeans",
+      "slug": "jeans",
+      "type": "Clothing",
+      "description": "14.5oz Japanese selvedge denim, raw indigo finishes, and artisanal hand-distressed cuts.",
+      "image": "https://images.unsplash.com/photo-1542272604-780c96856592?auto=format&fit=crop&w=1000&q=80",
+      "itemCount": 9,
+      "isActive": true
+    },
+    {
+      "id": "cat-formal-wear",
+      "name": "Formal Wear",
+      "slug": "formal-wear",
+      "type": "Clothing",
+      "description": "Silk-blend tuxedo blazers, bespoke double-breasted suits, and red carpet tailored eveningwear.",
+      "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80",
+      "itemCount": 8,
+      "isActive": true
+    },
+    {
+      "id": "cat-casual-wear",
+      "name": "Casual Wear",
+      "slug": "casual-wear",
+      "type": "Clothing",
+      "description": "Pure cashmere knits, effortless polo shirts, relaxed overshirts, and luxury leisurewear.",
+      "image": "https://images.unsplash.com/photo-1614975058789-41316d0e2e9c?auto=format&fit=crop&w=1000&q=80",
+      "itemCount": 16,
+      "isActive": true
+    },
+    {
+      "id": "cat-streetwear",
+      "name": "Streetwear",
+      "slug": "streetwear",
+      "type": "Clothing",
+      "description": "Bold drops, oversized cuts, raw edge detailing, and rebellious luxury aesthetics.",
+      "image": "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=1000&q=80",
+      "itemCount": 20,
+      "isActive": true
+    },
+    {
+      "id": "cat-accessories",
+      "name": "Accessories",
+      "slug": "accessories",
+      "type": "Clothing",
+      "description": "Goodyear-welted Chelsea boots, saddle leather weekender bags, and 18K gold signet rings.",
+      "image": "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?auto=format&fit=crop&w=1000&q=80",
+      "itemCount": 12,
+      "isActive": true
+    }
+  ],
+  "users": [
+    {
+      "id": "user-admin-1",
+      "name": "Resol",
+      "username": "Resol",
+      "email": "resol@gentlemensavage.com",
+      "role": "admin",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      "phone": "+1 (555) 987-6543",
+      "twoFactorEnabled": true,
+      "isVerified": true,
+      "createdAt": "2025-01-01T00:00:00Z",
+      "passwordHash": "8d6fc28ccae9ea748787813c62e5d73138c9b2ef7ad6fea920222643fb33a6838ab7ee79ead854fcfe8221f9ca5d3514cdba86e980a262a0c65a6a446d1d3e05",
+      "passwordSalt": "cf40078bb73baec6d7cdd9e601905670"
+    },
+    {
+      "id": "user-cust-1",
+      "name": "Julian Sterling",
+      "email": "alex@gentlemansavage.com",
+      "passwordHash": "b2554076a262da6df4ca1a2ec8aac8472e345bdeb9b23155ca6ea94e6932001b08d907073073edeb7382a99762cd29731b0ad7ea9a020138723c6cc409b7ccca",
+      "passwordSalt": "cf40078bb73baec6d7cdd9e601905670",
+      "role": "customer",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+      "phone": "+1 (555) 234-5678",
+      "addresses": [
+        {
+          "id": "addr-1",
+          "isDefault": true,
+          "name": "Julian Sterling",
+          "street": "742 Evergreen Terrace, Penthouse B",
+          "city": "New York",
+          "state": "NY",
+          "zip": "10021",
+          "country": "United States",
+          "phone": "+1 (555) 234-5678"
+        },
+        {
+          "id": "addr-2",
+          "isDefault": false,
+          "name": "Julian Sterling (Studio)",
+          "street": "148 Mercer St, Suite 4",
+          "city": "New York",
+          "state": "NY",
+          "zip": "10012",
+          "country": "United States",
+          "phone": "+1 (555) 234-5678"
+        }
+      ],
+      "createdAt": "2026-01-15T10:00:00Z"
+    }
+  ],
+  "orders": [
+    {
+      "orderNumber": "GS-6458",
+      "userId": "user-admin-1",
+      "customer": {
+        "name": "Julian Sterling",
+        "email": "resol@gentlemensavage.com",
+        "phone": "+880 1700-000000"
+      },
+      "shippingAddress": {
+        "street": "Road 11, Block D, Banani",
+        "city": "Dhaka",
+        "state": "Dhaka",
+        "zip": "1213",
+        "country": "Bangladesh"
+      },
+      "items": [
+        {
+          "productId": "gs-prod-5",
+          "product": {
+            "id": "gs-prod-5",
+            "name": "Vintage Washed Acid Drop Tee",
+            "slug": "vintage-washed-acid-drop-tee",
+            "tagline": "280gsm heavyweight jersey with distressed mineral wash.",
+            "description": "Individually hand-treated with an artisanal acid wash technique, ensuring no two tees are identical. Thick 1.25-inch ribbed collar, reinforced twin-needle stitching, and dropped shoulders create the quintessential luxury streetwear silhouette.",
+            "fabricCare": "100% Combed Compact Cotton. Machine wash cold with like colors. Tumble dry low.",
+            "fitDetails": "Relaxed boxy streetwear fit. True to size. Model is 6'1\" wearing size L.",
+            "price": 68,
+            "discountPrice": 52,
+            "category": "T-Shirts",
+            "season": "Summer Collection",
+            "sizes": [
+              "XS",
+              "S",
+              "M",
+              "L",
+              "XL",
+              "XXL"
+            ],
+            "colors": [
+              {
+                "name": "Mineral Washed Black",
+                "hex": "#232326"
+              },
+              {
+                "name": "Desert Clay",
+                "hex": "#9B6454"
+              },
+              {
+                "name": "Sage Moss",
+                "hex": "#5A675B"
+              }
+            ],
+            "stock": 48,
+            "stockPerSize": {
+              "XS": 6,
+              "S": 10,
+              "M": 15,
+              "L": 11,
+              "XL": 4,
+              "XXL": 2
+            },
+            "images": [
+              "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=1000&q=80"
+            ],
+            "rating": 4.7,
+            "reviewCount": 65,
+            "tags": [
+              "T-Shirt",
+              "Streetwear",
+              "Summer",
+              "Vintage",
+              "Washed"
+            ],
+            "isFeatured": false,
+            "isTrending": true,
+            "isNewArrival": true,
+            "isBestSeller": true,
+            "isFlashSale": true,
+            "flashSaleDiscount": 23,
+            "createdAt": "2026-02-14T09:00:00Z",
+            "views": 5,
+            "cartAdds": 2
+          },
+          "size": "L",
+          "color": "Mineral Washed Black",
+          "quantity": 1,
+          "price": 52
+        }
+      ],
+      "subtotal": 52,
+      "discountAmount": 0,
+      "shippingFee": 15,
+      "shippingMethod": "Complimentary VIP Express Courier",
+      "tax": 4.16,
+      "total": 71.16,
+      "paymentMethod": "cod",
+      "paymentStatus": "pending",
+      "status": "Pending",
+      "trackingNumber": "GS-EXP-29985197",
+      "timeline": [
+        {
+          "status": "Pending",
+          "description": "Order placed with Cash on Delivery.",
+          "timestamp": "2026-08-31T17:31:55.828Z"
+        }
+      ],
+      "id": "order-gs-5833",
+      "createdAt": "2026-08-31T17:31:55.833Z"
+    },
+    {
+      "orderNumber": "GS-4872",
+      "userId": "user-admin-1",
+      "customer": {
+        "name": "Julian Sterling",
+        "email": "resol@gentlemensavage.com",
+        "phone": "+880 1700-000000"
+      },
+      "shippingAddress": {
+        "street": "Road 11, Block D, Banani",
+        "city": "Dhaka",
+        "state": "Dhaka",
+        "zip": "1213",
+        "country": "Bangladesh"
+      },
+      "items": [
+        {
+          "productId": "gs-prod-1",
+          "product": {
+            "id": "gs-prod-1",
+            "name": "Obsidian Raw Leather Biker Jacket",
+            "slug": "obsidian-raw-leather-biker-jacket",
+            "tagline": "Hand-buffed Italian calfskin with gunmetal hardware.",
+            "description": "Crafted from full-grain vegetable-tanned Italian calfskin, the Obsidian Biker Jacket embodies the raw attitude of modern luxury. Features asymmetric heavy-duty silver-tone zip closures, structured shoulder panels, and quilted silk-satin lining for effortless layering and all-season endurance.",
+            "fabricCare": "100% Full-Grain Calfskin Leather. Lining: 100% Cupro Silk. Professional leather dry clean only.",
+            "fitDetails": "Tailored slim fit with articulated arms. Model is 6'2\" (188cm) wearing size Large.",
+            "price": 450,
+            "discountPrice": 390,
+            "category": "Jackets",
+            "season": "Winter Collection",
+            "sizes": [
+              "S",
+              "M",
+              "L",
+              "XL",
+              "XXL"
+            ],
+            "colors": [
+              {
+                "name": "Obsidian Black",
+                "hex": "#0F0F10"
+              },
+              {
+                "name": "Distressed Charcoal",
+                "hex": "#2E2E32"
+              },
+              {
+                "name": "Cognac Brown",
+                "hex": "#5A3825"
+              }
+            ],
+            "stock": 13,
+            "stockPerSize": {
+              "S": 2,
+              "M": 4,
+              "L": 4,
+              "XL": 2,
+              "XXL": 1
+            },
+            "images": [
+              "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1520975954732-35dd22299614?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1521223890158-f9f7c3d5d504?auto=format&fit=crop&w=1000&q=80"
+            ],
+            "rating": 4.9,
+            "reviewCount": 38,
+            "tags": [
+              "Leather",
+              "Outerwear",
+              "Bestseller",
+              "Luxury",
+              "Winter"
+            ],
+            "isFeatured": true,
+            "isTrending": true,
+            "isNewArrival": false,
+            "isBestSeller": true,
+            "isFlashSale": true,
+            "flashSaleDiscount": 15,
+            "createdAt": "2026-01-10T12:00:00Z",
+            "salesCount": 1
+          },
+          "size": "L",
+          "color": "Obsidian Black",
+          "quantity": 1,
+          "price": 390
+        }
+      ],
+      "subtotal": 390,
+      "discountAmount": 0,
+      "shippingFee": 0,
+      "shippingMethod": "White Glove Next-Day Guaranteed Priority",
+      "tax": 31.2,
+      "total": 421.2,
+      "paymentMethod": "cod",
+      "paymentStatus": "pending",
+      "status": "Pending",
+      "trackingNumber": "GS-EXP-40201313",
+      "timeline": [
+        {
+          "status": "Pending",
+          "description": "Order placed with Cash on Delivery.",
+          "timestamp": "2026-08-31T17:23:28.950Z"
+        },
+        {
+          "status": "Processing",
+          "description": "Order status updated to Processing.",
+          "timestamp": "2026-08-31T17:31:23.590Z"
+        },
+        {
+          "status": "Delivered",
+          "description": "Order status updated to Delivered.",
+          "timestamp": "2026-08-31T17:31:25.529Z"
+        },
+        {
+          "status": "Pending",
+          "description": "Order status updated to Pending.",
+          "timestamp": "2026-08-31T17:31:36.801Z"
+        }
+      ],
+      "id": "order-gs-8951",
+      "createdAt": "2026-08-31T17:23:28.951Z"
+    },
+    {
+      "orderNumber": "GS-9665",
+      "userId": "user-admin-1",
+      "customer": {
+        "name": "Julian Sterling",
+        "email": "julian@gentlemansavage.com",
+        "phone": "+880 1700-000000"
+      },
+      "shippingAddress": {
+        "street": "Road 11, Block D, Banani",
+        "city": "Dhaka",
+        "state": "Dhaka",
+        "zip": "1213",
+        "country": "Bangladesh"
+      },
+      "items": [
+        {
+          "productId": "gs-prod-2",
+          "product": {
+            "id": "gs-prod-2",
+            "name": "Tailored Silk-Blend Tuxedo Blazer",
+            "slug": "tailored-silk-blend-tuxedo-blazer",
+            "tagline": "Peak satin lapels for the uncompromising gentleman.",
+            "description": "A masterclass in modern sartorial precision. Cut from an exquisite 280gsm wool-mulberry silk blend, this tuxedo blazer combines sharp architectural shoulders with a softly draped waist. Finished with hand-stitched grosgrain lapels and genuine horn buttons.",
+            "fabricCare": "85% Virgin Wool, 15% Mulberry Silk. Dry clean only. Warm iron with pressing cloth.",
+            "fitDetails": "Modern architectural cut. Fits true to size with sculpted waist. Model is 6'1\" wearing size 40R (M).",
+            "price": 520,
+            "discountPrice": 460,
+            "category": "Formal Wear",
+            "season": "All-Season",
+            "sizes": [
+              "38R",
+              "40R",
+              "42R",
+              "44R",
+              "46R"
+            ],
+            "colors": [
+              {
+                "name": "Midnight Tuxedo Black",
+                "hex": "#090A0F"
+              },
+              {
+                "name": "Champagne Ivory",
+                "hex": "#EDE8DE"
+              },
+              {
+                "name": "Imperial Emerald",
+                "hex": "#0C2E24"
+              }
+            ],
+            "stock": 18,
+            "stockPerSize": {
+              "38R": 3,
+              "40R": 6,
+              "42R": 5,
+              "44R": 3,
+              "46R": 1
+            },
+            "images": [
+              "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1000&q=80",
+              "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?auto=format&fit=crop&w=1000&q=80"
+            ],
+            "rating": 5,
+            "reviewCount": 42,
+            "tags": [
+              "Formal",
+              "Blazer",
+              "Tuxedo",
+              "Gentleman",
+              "Wedding"
+            ],
+            "isFeatured": true,
+            "isTrending": true,
+            "isNewArrival": true,
+            "isBestSeller": false,
+            "isFlashSale": false,
+            "createdAt": "2026-02-01T10:00:00Z"
+          },
+          "size": "42R",
+          "color": "Midnight Tuxedo Black",
+          "quantity": 1,
+          "price": 460
+        }
+      ],
+      "subtotal": 460,
+      "discountAmount": 0,
+      "shippingFee": 0,
+      "shippingMethod": "Complimentary VIP Express Courier",
+      "tax": 36.8,
+      "total": 496.8,
+      "paymentMethod": "cod",
+      "paymentStatus": "pending",
+      "status": "Pending",
+      "trackingNumber": "GS-EXP-83548778",
+      "timeline": [
+        {
+          "status": "Pending",
+          "description": "Order placed with Cash on Delivery.",
+          "timestamp": "2026-08-31T17:22:55.168Z"
+        }
+      ],
+      "id": "order-gs-5171",
+      "createdAt": "2026-08-31T17:22:55.171Z"
+    }
+  ],
+  "coupons": [
+    {
+      "id": "coup-1",
+      "code": "SAVAGE20",
+      "discountPercent": 20,
+      "minSpend": 150,
+      "maxDiscount": 200,
+      "expiresAt": "2026-12-31T23:59:59Z",
+      "usageCount": 42,
+      "isActive": true
+    },
+    {
+      "id": "coup-2",
+      "code": "GENTLEMAN10",
+      "discountAmount": 10,
+      "minSpend": 50,
+      "expiresAt": "2026-12-31T23:59:59Z",
+      "usageCount": 118,
+      "isActive": true
+    },
+    {
+      "id": "coup-3",
+      "code": "VIP50",
+      "discountAmount": 50,
+      "minSpend": 250,
+      "expiresAt": "2026-12-31T23:59:59Z",
+      "usageCount": 23,
+      "isActive": true
+    },
+    {
+      "id": "coup-4",
+      "code": "SUMMER15",
+      "discountPercent": 15,
+      "minSpend": 100,
+      "expiresAt": "2026-09-30T23:59:59Z",
+      "usageCount": 65,
+      "isActive": true
+    },
+    {
+      "code": "DECENT",
+      "discountPercent": 50,
+      "minSpend": 100,
+      "expiresAt": "2026-12-31T00:00:00.000Z",
+      "isActive": true,
+      "id": "coup-1787796071965",
+      "usageCount": 0
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-1",
+      "productId": "gs-prod-1",
+      "userName": "Marcus Vance",
+      "userAvatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80",
+      "rating": 5,
+      "title": "Unbelievable craftsmanship and leather quality",
+      "comment": "The calfskin has incredible weight and smell. The hardware feels indestructible. Easily on par with luxury fashion houses selling at triple the price. True to size.",
+      "date": "2026-02-18",
+      "verified": true,
+      "helpfulCount": 14
+    },
+    {
+      "id": "rev-2",
+      "productId": "gs-prod-1",
+      "userName": "Devon Hayes",
+      "userAvatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=150&q=80",
+      "rating": 5,
+      "title": "Showstopper jacket",
+      "comment": "Wore this to Milan Fashion Week and received compliments all night. The tailored silhouette gives a sharp look while still feeling rebellious.",
+      "date": "2026-02-15",
+      "verified": true,
+      "helpfulCount": 9
+    },
+    {
+      "id": "rev-3",
+      "productId": "gs-prod-2",
+      "userName": "Lord Charles Kensington",
+      "userAvatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80",
+      "rating": 5,
+      "title": "Masterpiece in tailoring",
+      "comment": "The lapels and waist contouring are immaculate. The silk sheen catches ambient lighting with subtle sophistication.",
+      "date": "2026-02-20",
+      "verified": true,
+      "helpfulCount": 21
+    },
+    {
+      "id": "rev-4",
+      "productId": "gs-prod-3",
+      "userName": "Tyler Bennett",
+      "userAvatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80",
+      "rating": 5,
+      "title": "The heaviest and cleanest hoodie I own",
+      "comment": "The 520gsm terry is thick, warm, and the hood stands up cleanly on its own. Absolute perfection.",
+      "date": "2026-02-11",
+      "verified": true,
+      "helpfulCount": 16
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": "log-1788197515837",
+      "action": "ORDER_PLACED",
+      "details": "New order #GS-6458 placed for ৳71.16",
+      "user": "Julian Sterling",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-08-31T17:31:55.837Z"
+    },
+    {
+      "id": "log-1788197496804",
+      "action": "ORDER_STATUS_UPDATE",
+      "details": "Order #GS-4872 changed to Pending",
+      "user": "Admin",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-08-31T17:31:36.804Z"
+    },
+    {
+      "id": "log-1788197485532",
+      "action": "ORDER_STATUS_UPDATE",
+      "details": "Order #GS-4872 changed to Delivered",
+      "user": "Admin",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-08-31T17:31:25.532Z"
+    },
+    {
+      "id": "log-1788197483593",
+      "action": "ORDER_STATUS_UPDATE",
+      "details": "Order #GS-4872 changed to Processing",
+      "user": "Admin",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-08-31T17:31:23.593Z"
+    },
+    {
+      "id": "log-1788197008954",
+      "action": "ORDER_PLACED",
+      "details": "New order #GS-4872 placed for $421.20",
+      "user": "Julian Sterling",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-08-31T17:23:28.954Z"
+    },
+    {
+      "id": "log-1788196975251",
+      "action": "ORDER_PLACED",
+      "details": "New order #GS-9665 placed for $496.80",
+      "user": "Julian Sterling",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-08-31T17:22:55.251Z"
+    },
+    {
+      "id": "log-1787848749729",
+      "action": "USER_VERIFIED",
+      "details": "Admin account Resol verified successfully",
+      "user": "Resol",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-08-27T16:39:09.729Z"
+    },
+    {
+      "id": "log-1787796071978",
+      "action": "COUPON_CREATED",
+      "details": "Created coupon: DECENT",
+      "user": "Admin",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-08-27T02:01:11.978Z"
+    },
+    {
+      "id": "log-1787791807168",
+      "action": "ORDER_PLACED",
+      "details": "New order #GS-5965 placed for $421.20",
+      "user": "Julian Sterling",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-08-27T00:50:07.168Z"
+    },
+    {
+      "id": "log-1",
+      "action": "ORDER_STATUS_UPDATE",
+      "details": "Order #GS-9821 status updated to Shipped (FedEx Express)",
+      "user": "Alexander Savage",
+      "ip": "192.168.1.10",
+      "timestamp": "2026-02-26T11:45:00Z"
+    },
+    {
+      "id": "log-2",
+      "action": "COUPON_CREATED",
+      "details": "Created new discount code 'SUMMER15' with 15% discount",
+      "user": "Alexander Savage",
+      "ip": "192.168.1.10",
+      "timestamp": "2026-02-25T16:10:00Z"
+    },
+    {
+      "id": "log-3",
+      "action": "PRODUCT_UPDATED",
+      "details": "Updated inventory levels for 'Obsidian Raw Leather Biker Jacket'",
+      "user": "Alexander Savage",
+      "ip": "192.168.1.10",
+      "timestamp": "2026-02-25T09:20:00Z"
+    }
+  ],
+  "loginHistory": [
+    {
+      "id": "lh-1788193955786",
+      "email": "resol@gentlemensavage.com",
+      "role": "admin",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-31T16:32:35.786Z"
+    },
+    {
+      "id": "lh-1787916039815",
+      "email": "resol@gentlemensavage.com",
+      "role": "admin",
+      "ip": "::ffff:192.168.0.126",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-28T11:20:39.815Z"
+    },
+    {
+      "id": "lh-1787914879221",
+      "email": "resol@gentlemensavage.com",
+      "role": "admin",
+      "ip": "::ffff:192.168.0.126",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-28T11:01:19.221Z"
+    },
+    {
+      "id": "lh-1787848749743",
+      "email": "resol@gentlemensavage.com",
+      "role": "admin",
+      "ip": "::1",
+      "userAgent": "node",
+      "status": "Success",
+      "timestamp": "2026-08-27T16:39:09.743Z"
+    },
+    {
+      "id": "lh-1787792016115",
+      "email": "admin@gentlemensavage.com",
+      "role": "admin",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:53:36.115Z"
+    },
+    {
+      "id": "lh-1787791886454",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:51:26.454Z"
+    },
+    {
+      "id": "lh-1787791650187",
+      "email": "admin@gentlemensavage.com",
+      "role": "admin",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:47:30.187Z"
+    },
+    {
+      "id": "lh-1787791624869",
+      "email": "admin@gentlemansavage.com",
+      "role": "unknown",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Failed",
+      "timestamp": "2026-08-27T00:47:04.869Z"
+    },
+    {
+      "id": "lh-1787791623024",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:47:03.024Z"
+    },
+    {
+      "id": "lh-1787789668894",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:14:28.894Z"
+    },
+    {
+      "id": "lh-1787789665142",
+      "email": "admin@gentlemansavage.com",
+      "role": "admin",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:14:25.142Z"
+    },
+    {
+      "id": "lh-1787789661999",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:14:21.999Z"
+    },
+    {
+      "id": "lh-1787789626438",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:13:46.438Z"
+    },
+    {
+      "id": "lh-1787789624767",
+      "email": "admin@gentlemansavage.com",
+      "role": "admin",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:13:44.767Z"
+    },
+    {
+      "id": "lh-1787789622710",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:13:42.710Z"
+    },
+    {
+      "id": "lh-1787789620263",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:13:40.263Z"
+    },
+    {
+      "id": "lh-1787789617423",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:13:37.423Z"
+    },
+    {
+      "id": "lh-1787789095296",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:04:55.296Z"
+    },
+    {
+      "id": "lh-1787789091384",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:04:51.384Z"
+    },
+    {
+      "id": "lh-1787789089402",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:04:49.402Z"
+    },
+    {
+      "id": "lh-1787788841849",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:00:41.849Z"
+    },
+    {
+      "id": "lh-1787788839250",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "::1",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+      "status": "Success",
+      "timestamp": "2026-08-27T00:00:39.250Z"
+    },
+    {
+      "id": "lh-1",
+      "email": "admin@gentlemansavage.com",
+      "role": "admin",
+      "ip": "192.168.1.10",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124.0.0.0",
+      "status": "Success",
+      "timestamp": "2026-02-27T04:30:00Z"
+    },
+    {
+      "id": "lh-2",
+      "email": "alex@gentlemansavage.com",
+      "role": "customer",
+      "ip": "108.45.192.88",
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X) AppleWebKit/605.1.15",
+      "status": "Success",
+      "timestamp": "2026-02-26T22:15:00Z"
+    }
+  ],
+  "settings": {
+    "appearance": {
+      "customThemeEnabled": false,
+      "primaryColor": "#D4AF37",
+      "secondaryColor": "#E5C365",
+      "accentColor": "#C5A880",
+      "backgroundColor": "#0B0B0C",
+      "cardColor": "#141418",
+      "textColor": "#FAF8F5",
+      "buttonColor": "#D4AF37",
+      "buttonTextColor": "#000000",
+      "logoUrl": "",
+      "faviconUrl": "",
+      "tagline": "Sophisticated Tailoring Meets Raw Luxury Streetwear"
+    },
+    "store": {
+      "storeName": "Gentleman Savage",
+      "currency": {
+        "code": "BDT",
+        "symbol": "৳"
+      },
+      "contactEmail": "concierge@gentlemansavage.com",
+      "contactPhone": "+880 1700-123456",
+      "status": "open"
+    },
+    "products": {
+      "lowStockThreshold": 10,
+      "itemsPerPage": 12
+    },
+    "orders": {
+      "freeShippingThreshold": 1500,
+      "standardShippingFee": 120
+    },
+    "marketing": {
+      "flashSaleActive": true,
+      "flashSaleDiscount": 20,
+      "flashSaleEndsAt": "2026-09-30T00:00:00.000Z"
+    },
+    "security": {
+      "twoFactorEnabled": true,
+      "sessionTimeoutMinutes": 120,
+      "adminRegistrationAllowed": true
+    },
+    "smtp": {
+      "enabled": false,
+      "host": "smtp.gmail.com",
+      "port": 587,
+      "user": "",
+      "pass": "",
+      "from": "Gentlemen Savage Concierge <concierge@gentlemensavage.com>",
+      "secure": false
+    }
+  },
+  "mailLogs": [
+    {
+      "to": "resol@gentlemensavage.com",
+      "subject": "🔑 Gentlemen Savage — Admin Verification Code [200099]",
+      "previewText": "Gentlemen Savage — Admin Security Verification. Your 6-digit activation code is: 200099. Valid for 15 minutes.",
+      "html": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Admin Security Verification</title>\n</head>\n<body style=\"margin:0;padding:0;background-color:#0b0b0c;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#f4f4f5;\">\n  <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"background-color:#0b0b0c;padding:40px 15px;\">\n    <tr>\n      <td align=\"center\">\n        <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"max-width:560px;background-color:#141418;border:1px solid #2a2a33;border-radius:24px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,0.6);\">\n          <!-- Header Banner -->\n          <tr>\n            <td style=\"padding:36px 36px 24px;text-align:center;border-bottom:1px solid #22222a;background:linear-gradient(180deg, #18181f 0%, #141418 100%);\">\n              <div style=\"font-family:'Cinzel',serif;font-size:22px;font-weight:900;letter-spacing:0.25em;color:#ffffff;text-transform:uppercase;\">\n                GENTLEMAN\n              </div>\n              <div style=\"font-size:10px;font-weight:800;letter-spacing:0.5em;color:#D4AF37;text-transform:uppercase;margin-top:2px;\">\n                SAVAGE\n              </div>\n              <div style=\"display:inline-block;margin-top:14px;padding:4px 14px;background-color:rgba(212,175,55,0.15);border:1px solid rgba(212,175,55,0.4);border-radius:999px;font-size:10px;font-weight:700;letter-spacing:0.15em;color:#D4AF37;text-transform:uppercase;\">\n                Security Verification Dossier\n              </div>\n            </td>\n          </tr>\n\n          <!-- Main Body -->\n          <tr>\n            <td style=\"padding:36px 36px 28px;\">\n              <h2 style=\"margin:0 0 12px;font-size:20px;font-weight:700;color:#ffffff;letter-spacing:-0.02em;\">\n                Administrator Access Request\n              </h2>\n              <p style=\"margin:0 0 20px;font-size:13px;line-height:1.6;color:#a1a1aa;\">\n                Greetings <strong style=\"color:#ffffff;\">Resol</strong> (Username: <span style=\"color:#D4AF37;font-weight:bold;\">Resol</span>),\n              </p>\n              <p style=\"margin:0 0 28px;font-size:13px;line-height:1.6;color:#a1a1aa;\">\n                A request has been initiated to register or verify your master administrator account for the <strong>Gentlemen Savage</strong> business console. Please submit the 6-digit authentication code below:\n              </p>\n\n              <!-- OTP Code Box -->\n              <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"margin:0 0 28px;\">\n                <tr>\n                  <td align=\"center\" style=\"background-color:#0b0b0c;border:2px solid #D4AF37;border-radius:18px;padding:22px 10px;\">\n                    <div style=\"font-size:11px;font-weight:700;letter-spacing:0.2em;color:#a1a1aa;text-transform:uppercase;margin-bottom:8px;\">\n                      Your Single-Use Verification Pin\n                    </div>\n                    <div style=\"font-family:'SF Pro Display',Menlo,monospace;font-size:36px;font-weight:900;letter-spacing:0.35em;color:#D4AF37;text-indent:0.35em;\">\n                      200099\n                    </div>\n                    <div style=\"font-size:11px;color:#71717a;margin-top:8px;\">\n                      ⏱ Expires in <strong>15 minutes</strong>\n                    </div>\n                  </td>\n                </tr>\n              </table>\n\n              <p style=\"margin:0 0 12px;font-size:12px;line-height:1.5;color:#71717a;\">\n                If you did not request this security code, please disregard this email. Unauthorized login attempts are automatically rate-limited and logged.\n              </p>\n            </td>\n          </tr>\n\n          <!-- Footer -->\n          <tr>\n            <td style=\"padding:20px 36px;background-color:#0d0d10;border-top:1px solid #202026;text-align:center;\">\n              <p style=\"margin:0;font-size:11px;color:#52525b;\">\n                © 2026 Gentlemen Savage Inc. Executive Security Infrastructure.\n              </p>\n            </td>\n          </tr>\n        </table>\n      </td>\n    </tr>\n  </table>\n</body>\n</html>",
+      "otpCode": "200099",
+      "status": "Sent (Dev Preview)",
+      "type": "verification",
+      "id": "mail-1787848744480-5mfk",
+      "sentAt": "2026-08-27T16:39:04.480Z"
+    }
+  ]
+}
