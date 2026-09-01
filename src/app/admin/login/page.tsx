@@ -10,7 +10,7 @@ export default function AdminLoginPage() {
   const router = useRouter();
   const { login } = useAuth();
 
-  const [identifier, setIdentifier] = useState("Resol");
+  const [identifier, setIdentifier] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
