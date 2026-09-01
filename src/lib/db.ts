@@ -18,6 +18,11 @@ import {
 import { hashPassword } from "./auth";
 import * as ordersDb from "./orders-db";
 import * as productsDb from "./products-db";
+import * as usersDb from "./users-db";
+import * as settingsDb from "./settings-db";
+import * as categoriesDb from "./categories-db";
+import * as couponsDb from "./coupons-db";
+import * as reviewsDb from "./reviews-db";
 
 export const DEFAULT_SETTINGS: StoreSettings = {
   appearance: {
@@ -140,52 +145,65 @@ export async function saveDb(data: DatabaseSchema): Promise<void> {
 }
 
 // ================= SETTINGS METHODS =================
+// Settings are persisted in Postgres (see settings-db.ts): on Vercel every
+// save (theme, store info, SMTP, security gate) silently failed.
 export async function getSettings(): Promise<StoreSettings> {
-  const db = await getDb();
-  return db.settings || DEFAULT_SETTINGS;
+  const existing = await settingsDb.getSettingsRow();
+  if (existing) return existing;
+
+  // One-time seed: prefer the settings that shipped in data/db.json, else defaults.
+  let seed = DEFAULT_SETTINGS;
+  try {
+    const db = await getDb();
+    if (db.settings) seed = db.settings;
+  } catch {
+    // No JSON file available — fall back to defaults.
+  }
+  await settingsDb.saveSettingsRow(seed);
+  return seed;
 }
 
 export async function updateSettings(updates: Partial<StoreSettings>): Promise<StoreSettings> {
-  const db = await getDb();
-  db.settings = {
-    ...db.settings,
+  const current = await getSettings();
+  const updated: StoreSettings = {
+    ...current,
     ...updates,
     appearance: {
-      ...db.settings.appearance,
+      ...current.appearance,
       ...(updates.appearance || {}),
     },
     store: {
-      ...db.settings.store,
+      ...current.store,
       ...(updates.store || {}),
     },
     products: {
-      ...db.settings.products,
+      ...current.products,
       ...(updates.products || {}),
     },
     orders: {
-      ...db.settings.orders,
+      ...current.orders,
       ...(updates.orders || {}),
     },
     marketing: {
-      ...db.settings.marketing,
+      ...current.marketing,
       ...(updates.marketing || {}),
     },
     security: {
-      ...db.settings.security,
+      ...current.security,
       ...(updates.security || {}),
     },
   };
-  await saveDb(db);
+  await settingsDb.saveSettingsRow(updated);
   await logActivity("SETTINGS_UPDATED", "Store configuration updated by Admin", "Admin");
-  return db.settings;
+  return updated;
 }
 
 export async function resetThemeSettings(): Promise<StoreSettings> {
-  const db = await getDb();
-  db.settings.appearance = { ...DEFAULT_SETTINGS.appearance };
-  await saveDb(db);
+  const current = await getSettings();
+  current.appearance = { ...DEFAULT_SETTINGS.appearance };
+  await settingsDb.saveSettingsRow(current);
   await logActivity("THEME_RESET", "Appearance settings reset to default Gentlemen Savage theme", "Admin");
-  return db.settings;
+  return current;
 }
 
 // ================= PRODUCT METHODS =================
@@ -361,42 +379,37 @@ export async function deleteProduct(id: string): Promise<boolean> {
 }
 
 // ================= CATEGORY METHODS =================
+// Persisted in Postgres (see categories-db.ts) — JSON writes die on Vercel.
 export async function getCategories(): Promise<Category[]> {
-  const db = await getDb();
-  return db.categories;
+  return categoriesDb.getAllCategories();
 }
 
 export async function createCategory(cat: Omit<Category, "id">): Promise<Category> {
-  const db = await getDb();
   const newCat: Category = {
     ...cat,
     id: `cat-${Date.now()}`,
   };
-  db.categories.push(newCat);
-  await saveDb(db);
+  await categoriesDb.insertCategory(newCat);
   await logActivity("CATEGORY_CREATED", `Created category: ${newCat.name}`, "Admin");
   return newCat;
 }
 
 export async function updateCategory(id: string, updates: Partial<Category>): Promise<Category | null> {
-  const db = await getDb();
-  const index = db.categories.findIndex((c) => c.id === id);
-  if (index === -1) return null;
+  const existing = await categoriesDb.getCategoryById(id);
+  if (!existing) return null;
 
-  db.categories[index] = { ...db.categories[index], ...updates };
-  await saveDb(db);
-  await logActivity("CATEGORY_UPDATED", `Updated category: ${db.categories[index].name}`, "Admin");
-  return db.categories[index];
+  const updated: Category = { ...existing, ...updates };
+  await categoriesDb.updateCategoryInDb(id, updated);
+  await logActivity("CATEGORY_UPDATED", `Updated category: ${updated.name}`, "Admin");
+  return updated;
 }
 
 export async function deleteCategory(id: string): Promise<boolean> {
-  const db = await getDb();
-  const index = db.categories.findIndex((c) => c.id === id);
-  if (index === -1) return false;
+  const existing = await categoriesDb.getCategoryById(id);
+  if (!existing) return false;
 
-  const deleted = db.categories.splice(index, 1)[0];
-  await saveDb(db);
-  await logActivity("CATEGORY_DELETED", `Deleted category: ${deleted.name}`, "Admin");
+  await categoriesDb.deleteCategoryFromDb(id);
+  await logActivity("CATEGORY_DELETED", `Deleted category: ${existing.name}`, "Admin");
   return true;
 }
 
@@ -412,7 +425,6 @@ export async function getOrderById(id: string): Promise<Order | null> {
 }
 
 export async function createOrder(orderData: Omit<Order, "id" | "createdAt">): Promise<Order> {
-  const db = await getDb();
   const newOrder: Order = {
     ...orderData,
     id: `order-gs-${Date.now().toString().slice(-4)}`,
@@ -433,17 +445,18 @@ export async function createOrder(orderData: Omit<Order, "id" | "createdAt">): P
     }
   }
 
-  // Increment coupon usage count if used
+  // Increment coupon usage count if used (Postgres)
   if (newOrder.couponCode) {
-    const coupon = db.coupons.find(
+    const coupons = await couponsDb.getAllCoupons();
+    const coupon = coupons.find(
       (c) => c.code.toUpperCase() === newOrder.couponCode!.toUpperCase()
     );
     if (coupon) {
       coupon.usageCount = (coupon.usageCount || 0) + 1;
+      await couponsDb.updateCouponInDb(coupon.id, coupon);
     }
   }
 
-  await saveDb(db);
   await ordersDb.insertOrder(newOrder);
   await logActivity(
     "ORDER_PLACED",
@@ -467,14 +480,14 @@ export async function updateOrderStatus(
 }
 
 // ================= COUPON METHODS =================
+// Persisted in Postgres (see coupons-db.ts) — JSON writes die on Vercel.
 export async function getCoupons(): Promise<Coupon[]> {
-  const db = await getDb();
-  return db.coupons;
+  return couponsDb.getAllCoupons();
 }
 
 export async function validateCoupon(code: string, subtotal: number): Promise<{ valid: boolean; coupon?: Coupon; discount: number; message: string }> {
-  const db = await getDb();
-  const coupon = db.coupons.find((c) => c.code.toUpperCase() === code.toUpperCase() && c.isActive);
+  const coupons = await couponsDb.getAllCoupons();
+  const coupon = coupons.find((c) => c.code.toUpperCase() === code.toUpperCase() && c.isActive);
 
   if (!coupon) {
     return { valid: false, discount: 0, message: "Invalid or inactive coupon code." };
@@ -512,43 +525,43 @@ export async function validateCoupon(code: string, subtotal: number): Promise<{ 
 }
 
 export async function createCoupon(couponData: Omit<Coupon, "id" | "usageCount">): Promise<Coupon> {
-  const db = await getDb();
   const newCoupon: Coupon = {
     ...couponData,
     id: `coup-${Date.now()}`,
     usageCount: 0,
   };
-  db.coupons.push(newCoupon);
-  await saveDb(db);
+  await couponsDb.insertCoupon(newCoupon);
   await logActivity("COUPON_CREATED", `Created coupon: ${newCoupon.code}`, "Admin");
   return newCoupon;
 }
 
 export async function deleteCoupon(id: string): Promise<boolean> {
-  const db = await getDb();
-  const index = db.coupons.findIndex((c) => c.id === id);
-  if (index === -1) return false;
+  const coupons = await couponsDb.getAllCoupons();
+  const existing = coupons.find((c) => c.id === id);
+  if (!existing) return false;
 
-  const deleted = db.coupons.splice(index, 1)[0];
-  await saveDb(db);
-  await logActivity("COUPON_DELETED", `Deleted coupon: ${deleted.code}`, "Admin");
+  await couponsDb.deleteCouponFromDb(id);
+  await logActivity("COUPON_DELETED", `Deleted coupon: ${existing.code}`, "Admin");
   return true;
 }
 
 // ================= USER & AUTH METHODS =================
+// Users are persisted in Postgres (see users-db.ts): on Vercel every JSON-file
+// user write (register, verify, password change) silently vanished on the next
+// cold start, which presented as "login doesn't work".
 export async function getUsers(): Promise<User[]> {
-  const db = await getDb();
-  return db.users.map((u) => {
+  const users = await usersDb.getAllUsers();
+  return users.map((u) => {
     const { passwordHash, passwordSalt, ...rest } = u;
     return rest as User;
   });
 }
 
 export async function findUserByEmail(email: string): Promise<User | null> {
-  const db = await getDb();
+  const users = await usersDb.getAllUsers();
   const clean = email.toLowerCase().trim();
   return (
-    db.users.find(
+    users.find(
       (u) =>
         u.email.toLowerCase() === clean ||
         (clean.includes("admin@gentlemen") && u.role === "admin") ||
@@ -558,10 +571,10 @@ export async function findUserByEmail(email: string): Promise<User | null> {
 }
 
 export async function findUserByEmailOrUsername(identifier: string): Promise<User | null> {
-  const db = await getDb();
+  const users = await usersDb.getAllUsers();
   const clean = identifier.toLowerCase().trim();
   return (
-    db.users.find(
+    users.find(
       (u) =>
         u.email.toLowerCase() === clean ||
         (u.username && u.username.toLowerCase() === clean) ||
@@ -573,25 +586,22 @@ export async function findUserByEmailOrUsername(identifier: string): Promise<Use
 }
 
 export async function createUser(userData: Omit<User, "id" | "createdAt">): Promise<User> {
-  const db = await getDb();
   const newUser: User = {
     ...userData,
     id: `user-${Date.now()}`,
     createdAt: new Date().toISOString(),
   };
-  db.users.push(newUser);
-  await saveDb(db);
+  await usersDb.insertUser(newUser);
   return newUser;
 }
 
 export async function updateUser(id: string, updates: Partial<User>): Promise<User | null> {
-  const db = await getDb();
-  const index = db.users.findIndex((u) => u.id === id);
-  if (index === -1) return null;
+  const existing = await usersDb.getUserById(id);
+  if (!existing) return null;
 
-  db.users[index] = { ...db.users[index], ...updates };
-  await saveDb(db);
-  const { passwordHash, passwordSalt, ...safeUser } = db.users[index];
+  const updated: User = { ...existing, ...updates };
+  await usersDb.updateUserInDb(id, updated);
+  const { passwordHash, passwordSalt, ...safeUser } = updated;
   return safeUser as User;
 }
 
@@ -600,9 +610,9 @@ export async function setVerificationCode(
   code: string,
   expiresAt: string
 ): Promise<boolean> {
-  const db = await getDb();
+  const users = await usersDb.getAllUsers();
   const clean = emailOrUsername.toLowerCase().trim();
-  const user = db.users.find(
+  const user = users.find(
     (u) =>
       u.email.toLowerCase() === clean ||
       (u.username && u.username.toLowerCase() === clean) ||
@@ -612,7 +622,7 @@ export async function setVerificationCode(
 
   user.verificationCode = code;
   user.verificationExpiresAt = expiresAt;
-  await saveDb(db);
+  await usersDb.updateUserInDb(user.id, user);
   return true;
 }
 
@@ -620,9 +630,9 @@ export async function verifyUserCode(
   emailOrUsername: string,
   code: string
 ): Promise<{ success: boolean; user?: User; message: string }> {
-  const db = await getDb();
+  const users = await usersDb.getAllUsers();
   const clean = emailOrUsername.toLowerCase().trim();
-  const user = db.users.find(
+  const user = users.find(
     (u) =>
       u.email.toLowerCase() === clean ||
       (u.username && u.username.toLowerCase() === clean) ||
@@ -644,7 +654,7 @@ export async function verifyUserCode(
   user.isVerified = true;
   user.verificationCode = undefined;
   user.verificationExpiresAt = undefined;
-  await saveDb(db);
+  await usersDb.updateUserInDb(user.id, user);
   await logActivity("USER_VERIFIED", `Admin account ${user.username || user.name} verified successfully`, user.name);
 
   const { passwordHash: _, passwordSalt: __, ...safeUser } = user;
@@ -652,14 +662,13 @@ export async function verifyUserCode(
 }
 
 export async function updateAdminPassword(userId: string, newPasswordPlain: string): Promise<boolean> {
-  const db = await getDb();
-  const admin = db.users.find((u) => u.id === userId && u.role === "admin");
-  if (!admin) return false;
+  const admin = await usersDb.getUserById(userId);
+  if (!admin || admin.role !== "admin") return false;
 
   const { hash, salt } = hashPassword(newPasswordPlain);
   admin.passwordHash = hash;
   admin.passwordSalt = salt;
-  await saveDb(db);
+  await usersDb.updateUserInDb(admin.id, admin);
   await logActivity("PASSWORD_CHANGED", "Admin password successfully updated", admin.name);
   return true;
 }
@@ -696,24 +705,21 @@ export async function clearMailLogs(): Promise<boolean> {
 
 
 // ================= REVIEWS =================
+// Persisted in Postgres (see reviews-db.ts) — posted reviews vanished on
+// Vercel's read-only filesystem.
 export async function getReviews(productId?: string): Promise<Review[]> {
-  const db = await getDb();
-  if (productId) {
-    return db.reviews.filter((r) => r.productId === productId);
-  }
-  return db.reviews;
+  return reviewsDb.getAllReviews(productId);
 }
 
 export async function addReview(reviewData: Omit<Review, "id" | "date">): Promise<Review> {
-  const db = await getDb();
   const newReview: Review = {
     ...reviewData,
     id: `rev-${Date.now()}`,
     date: new Date().toISOString().split("T")[0],
   };
-  db.reviews.unshift(newReview);
+  await reviewsDb.insertReview(newReview);
 
-  const productReviews = db.reviews.filter((r) => r.productId === reviewData.productId);
+  const productReviews = await reviewsDb.getAllReviews(reviewData.productId);
   const avgRating =
     productReviews.reduce((sum, r) => sum + r.rating, 0) / productReviews.length;
 
@@ -724,7 +730,6 @@ export async function addReview(reviewData: Omit<Review, "id" | "date">): Promis
     await productsDb.updateProductInDb(prod.id, prod);
   }
 
-  await saveDb(db);
   return newReview;
 }
 
@@ -788,8 +793,7 @@ export async function getLoginHistory(): Promise<LoginHistory[]> {
 
 // ================= REAL BUSINESS ANALYTICS =================
 export async function getAnalytics(period: "7d" | "30d" | "3m" | "6m" | "1y" = "30d"): Promise<AnalyticsSummary> {
-  const db = await getDb();
-  const settings = db.settings || DEFAULT_SETTINGS;
+  const settings = await getSettings();
   const lowThreshold = settings.products.lowStockThreshold || 10;
 
   const allOrders = await ordersDb.getOrders();

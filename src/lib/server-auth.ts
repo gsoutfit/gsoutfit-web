@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getDb } from "./db";
 import { verifySessionToken } from "./auth";
+import { getUserById } from "./users-db";
 import { User } from "@/types";
 
 export interface AuthenticatedSession {
@@ -23,8 +23,7 @@ export async function getSessionUser(
     const payload = verifySessionToken(token);
     if (!payload || !payload.id) return null;
 
-    const db = await getDb();
-    const user = db.users.find((u) => u.id === payload.id);
+    const user = await getUserById(payload.id);
     if (!user) return null;
 
     // Verify role matches stored database record to prevent client-side privilege escalation

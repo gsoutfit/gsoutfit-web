@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getReviews, addReview, getProductById } from "@/lib/db";
 import { checkRateLimit } from "@/lib/auth";
+import { requireAuth } from "@/lib/server-auth";
 
 export async function GET(request: NextRequest) {
   try {
@@ -19,12 +20,20 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
+    // Reviews require a logged-in account — previously anyone could post
+    // "verified" reviews and permanently shift product ratings.
+    const authCheck = await requireAuth(request);
+    if (authCheck instanceof NextResponse) {
+      return authCheck;
+    }
+    const { user } = authCheck;
+
     const clientIp =
       request.headers.get("x-forwarded-for")?.split(",")[0].trim() ||
       request.headers.get("x-real-ip") ||
       "127.0.0.1";
 
-    const rateCheck = checkRateLimit(`review:${clientIp}`, 5, 10 * 60 * 1000);
+    const rateCheck = checkRateLimit(`review:${user.id}:${clientIp}`, 5, 10 * 60 * 1000);
     if (!rateCheck.allowed) {
       return NextResponse.json(
         {
@@ -38,11 +47,11 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json().catch(() => ({}));
-    const { productId, userName, rating, title, comment } = body;
+    const { productId, rating, title, comment } = body;
 
-    if (!productId || !userName || !rating || !comment) {
+    if (!productId || !rating || !comment) {
       return NextResponse.json(
-        { success: false, message: "Product ID, name, rating, and comment are required." },
+        { success: false, message: "Product ID, rating, and comment are required." },
         { status: 400 }
       );
     }
@@ -64,8 +73,9 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Sanitize user inputs against XSS and excessive length
-    const cleanUserName = String(userName).replace(/<[^>]*>?/gm, "").trim().slice(0, 60);
+    // Reviewer identity comes from the session, not the request body —
+    // otherwise anyone can post under any name.
+    const cleanUserName = String(user.name || "Customer").replace(/<[^>]*>?/gm, "").trim().slice(0, 60);
     const cleanTitle = String(title || "Verified Purchase Review").replace(/<[^>]*>?/gm, "").trim().slice(0, 100);
     const cleanComment = String(comment).replace(/<[^>]*>?/gm, "").trim().slice(0, 1000);
 

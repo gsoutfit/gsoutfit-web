@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSettings, updateSettings } from "@/lib/db";
-import { requireAdmin } from "@/lib/server-auth";
+import { requireAdmin, getSessionUser } from "@/lib/server-auth";
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
     const settings = await getSettings();
-    // Mask sensitive SMTP credentials in public response
+    // Mask sensitive SMTP credentials in any response
     const sanitized = {
       ...settings,
       smtp: settings.smtp
@@ -15,6 +15,15 @@ export async function GET() {
           }
         : undefined,
     };
+
+    // Full config (security flags, SMTP host/user) only for admins. The
+    // storefront (ThemeContext) only needs appearance/store/marketing data.
+    const user = await getSessionUser(request);
+    if (user?.role !== "admin") {
+      const { security: _security, smtp: _smtp, ...publicSettings } = sanitized;
+      return NextResponse.json({ success: true, data: publicSettings });
+    }
+
     return NextResponse.json({ success: true, data: sanitized });
   } catch (error: any) {
     return NextResponse.json(

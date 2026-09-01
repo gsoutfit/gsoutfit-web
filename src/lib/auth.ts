@@ -5,10 +5,15 @@ const LEGACY_ITERATIONS = 10000;
 const KEYLEN = 64;
 const DIGEST = "sha512";
 
-// Server secret for signing session tokens
-const SESSION_SECRET =
-  process.env.SESSION_SECRET ||
-  "gs_production_secret_key_gentleman_savage_auth_signature_2026_unbreakable_salt";
+// Server secret for signing session tokens. MUST come from the environment —
+// a hardcoded fallback in a public repo lets anyone forge admin sessions.
+function getSessionSecret(): string {
+  const secret = process.env.SESSION_SECRET;
+  if (!secret) {
+    throw new Error("SESSION_SECRET environment variable is not set.");
+  }
+  return secret;
+}
 
 export interface SessionPayload {
   id: string;
@@ -96,7 +101,7 @@ export function signSessionToken(user: {
 
   const payloadB64 = Buffer.from(JSON.stringify(payload)).toString("base64url");
   const signature = crypto
-    .createHmac("sha256", SESSION_SECRET)
+    .createHmac("sha256", getSessionSecret())
     .update(payloadB64)
     .digest("base64url");
 
@@ -112,27 +117,13 @@ export function verifySessionToken(token: string): SessionPayload | null {
 
     const parts = token.split(".");
     if (parts.length !== 2) {
-      // Check legacy JSON string format as fallback during transition
-      try {
-        const legacy = JSON.parse(decodeURIComponent(token));
-        if (legacy && legacy.id && legacy.role) {
-          return {
-            id: legacy.id,
-            role: legacy.role,
-            email: legacy.email || "",
-            iat: Date.now(),
-            exp: Date.now() + 3600000,
-          };
-        }
-      } catch {
-        return null;
-      }
+      // No unsigned/legacy formats: a valid token is always payloadB64.signature.
       return null;
     }
 
     const [payloadB64, signature] = parts;
     const expectedSig = crypto
-      .createHmac("sha256", SESSION_SECRET)
+      .createHmac("sha256", getSessionSecret())
       .update(payloadB64)
       .digest("base64url");
 
