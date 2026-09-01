@@ -93,6 +93,11 @@ export default function AdminLoginPage() {
               <input
                 type="text"
                 required
+                autoComplete="off"
+                autoCorrect="off"
+                autoCapitalize="off"
+                spellCheck={false}
+                name="admin-identifier-field"
                 value={identifier}
                 onChange={(e) => setIdentifier(e.target.value)}
                 className="w-full p-3 bg-[#18181f] border border-zinc-800 rounded-xl text-zinc-200 focus:outline-none focus:border-[#D4AF37]"
@@ -107,6 +112,8 @@ export default function AdminLoginPage() {
                 type="password"
                 required
                 placeholder="••••••••••••"
+                autoComplete="new-password"
+                name="admin-password-field"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full p-3 bg-[#18181f] border border-zinc-800 rounded-xl text-zinc-200 focus:outline-none focus:border-[#D4AF37]"
