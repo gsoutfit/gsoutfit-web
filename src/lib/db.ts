@@ -16,6 +16,7 @@ import {
   MailLog,
 } from "@/types";
 import { hashPassword } from "./auth";
+import * as ordersDb from "./orders-db";
 
 export const DEFAULT_SETTINGS: StoreSettings = {
   appearance: {
@@ -405,16 +406,13 @@ export async function deleteCategory(id: string): Promise<boolean> {
 
 // ================= ORDER METHODS =================
 export async function getOrders(userId?: string): Promise<Order[]> {
-  const db = await getDb();
-  if (userId) {
-    return db.orders.filter((o) => o.userId === userId);
-  }
-  return db.orders;
+  // Orders are persisted in Postgres (not the JSON file) because Vercel's
+  // serverless filesystem is read-only in production.
+  return ordersDb.getOrders(userId);
 }
 
 export async function getOrderById(id: string): Promise<Order | null> {
-  const db = await getDb();
-  return db.orders.find((o) => o.id === id || o.orderNumber === id) || null;
+  return ordersDb.getOrderById(id);
 }
 
 export async function createOrder(orderData: Omit<Order, "id" | "createdAt">): Promise<Order> {
@@ -447,8 +445,8 @@ export async function createOrder(orderData: Omit<Order, "id" | "createdAt">): P
     }
   }
 
-  db.orders.unshift(newOrder);
   await saveDb(db);
+  await ordersDb.insertOrder(newOrder);
   await logActivity(
     "ORDER_PLACED",
     `New order #${newOrder.orderNumber} placed for ৳${newOrder.total.toFixed(2)}`,
@@ -463,21 +461,9 @@ export async function updateOrderStatus(
   trackingNumber?: string,
   note?: string
 ): Promise<Order | null> {
-  const db = await getDb();
-  const order = db.orders.find((o) => o.id === id || o.orderNumber === id);
+  const order = await ordersDb.updateOrderStatusInDb(id, status, trackingNumber, note);
   if (!order) return null;
 
-  order.status = status;
-  if (trackingNumber) {
-    order.trackingNumber = trackingNumber;
-  }
-  order.timeline.push({
-    status,
-    description: note || `Order status updated to ${status}.`,
-    timestamp: new Date().toISOString(),
-  });
-
-  await saveDb(db);
   await logActivity("ORDER_STATUS_UPDATE", `Order #${order.orderNumber} changed to ${status}`, "Admin");
   return order;
 }
@@ -807,7 +793,8 @@ export async function getAnalytics(period: "7d" | "30d" | "3m" | "6m" | "1y" = "
   const settings = db.settings || DEFAULT_SETTINGS;
   const lowThreshold = settings.products.lowStockThreshold || 10;
 
-  const validOrders = db.orders.filter((o) => o.status !== "Cancelled");
+  const allOrders = await ordersDb.getOrders();
+  const validOrders = allOrders.filter((o) => o.status !== "Cancelled");
   const totalRevenue = validOrders.reduce((sum, o) => sum + o.total, 0);
   const totalOrders = validOrders.length;
   const productsSold = validOrders.reduce(
@@ -914,11 +901,11 @@ export async function getAnalytics(period: "7d" | "30d" | "3m" | "6m" | "1y" = "
   });
 
   const ordersByStatus: Record<OrderStatus, number> = {
-    Pending: db.orders.filter((o) => o.status === "Pending").length,
-    Processing: db.orders.filter((o) => o.status === "Processing").length,
-    Shipped: db.orders.filter((o) => o.status === "Shipped").length,
-    Delivered: db.orders.filter((o) => o.status === "Delivered").length,
-    Cancelled: db.orders.filter((o) => o.status === "Cancelled").length,
+    Pending: allOrders.filter((o) => o.status === "Pending").length,
+    Processing: allOrders.filter((o) => o.status === "Processing").length,
+    Shipped: allOrders.filter((o) => o.status === "Shipped").length,
+    Delivered: allOrders.filter((o) => o.status === "Delivered").length,
+    Cancelled: allOrders.filter((o) => o.status === "Cancelled").length,
   };
 
   const lowStockProducts = db.products.filter((p) => p.stock <= lowThreshold);
@@ -946,7 +933,7 @@ export async function getAnalytics(period: "7d" | "30d" | "3m" | "6m" | "1y" = "
     ordersByStatus,
     lowStockProducts,
     categoryStats,
-    recentOrders: db.orders.slice(0, 6),
+    recentOrders: allOrders.slice(0, 6),
     topSellingProducts,
   };
 }
